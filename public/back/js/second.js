@@ -61,8 +61,6 @@ $(function () {
       //data: 上传后的结果
       done: function (e, data) {//图片上传后的回调函数
   
-        //获取到地址后，需要干什么？？？？
-        console.log(data.result.picAddr);
         //修改img_box下的img的src
         $(".img_box img").attr("src", data.result.picAddr);
   
