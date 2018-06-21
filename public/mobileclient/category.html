@@ -10,32 +10,53 @@
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/category.css">
 </head>
 
 <body>
   <div class="lt_container">
     <!-- 头部 -->
     <div class="lt_header">
-      <a href="index.html" class="header_left">
-        <span class="fa fa-home"></span>
+      <a href="javascript:history.go(-1);" class="header_left">
+        <span class="mui-icon mui-icon-back"></span>
       </a>
-      <h4>乐淘云购</h4>
+      <h4>乐淘分类</h4>
       <a href="search.html" class="header_right">
         <span class="fa fa-search"></span>
       </a>
     </div>
     <!-- 内容区 -->
-  
+    <div class="lt_content">
+      <div class="content-left">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <ul class="mui-clearfix">
+              <!-- 动态生成分类 -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 右边区域 -->
+      <div class="content-right">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <ul class="mui-clearfix">
+              <!-- 动态生成二级分类 -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- 尾部 -->
     <div class="lt_footer">
       <ul class="mui-clearfix">
-        <li class="now">
+        <li>
           <a href="index.html">
             <span class="fa fa-home"></span>
             <p>首页</p>
           </a>
         </li>
-        <li>
+        <li class="now">
           <a href="category.html">
             <span class="fa fa-bars"></span>
             <p>分类</p>
@@ -57,7 +78,32 @@
   </div>
   <script src="lib/zepto/zepto.min.js"></script>
   <script src="lib/mui/js/mui.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/category.js"></script>
+
+  <script type="text/html" id="tpl">
+    {{each rows v i}}
+    <li data-id='{{v.id}}' class='{{i==0?"now":""}}'>
+      <a href="javascript:;">{{v.categoryName}}</a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script type="text/html" id="tplsecond">
+    {{if rows.length===0}}
+    <p style="margin-top: 10px;margin-left:20px">该分类下并无商品</p>
+    {{/if}}
+
+    {{each rows v i}}
+      <li>
+        <a href="javascript:;">
+          <img src="{{v.brandLogo}}" alt="">
+          <p>{{v.brandName}}</p>
+        </a>
+      </li>
+      {{/each}}
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,45 @@
+.content-left{
+  width: 90px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  /* background-color:pink; */
+}
+
+.content-right{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  /* background-color: lime; */
+}
+
+.content-left li a{
+  display: block;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: pink;
+  border-bottom: 1px solid red;
+  border-right: 1px solid red;
+}
+
+.content-left li.now a{
+  background-color: #fff;
+  border-right: none;
+}
+
+.content-right li{
+  width: 33.33%;
+  float: left;
+}
+
+.content-right li img{
+  width: 62px;
+  height: 62px;
+  margin: 0 auto;
+}
+
+.content-right li p{
+  text-align: center;
+}
