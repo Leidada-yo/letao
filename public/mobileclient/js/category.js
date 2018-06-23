@@ -14,6 +14,7 @@ $(function () {
     $(this).addClass('now').siblings().removeClass('now');
     var id = $(this).data('id');
     render(id);
+    mui('.content-right .mui-scroll-wrapper').scroll().scrollTo(0,0,100)
   })
 })
 

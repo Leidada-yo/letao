@@ -6,29 +6,3 @@
   float: left;
   width: 33.33%;
 }
-
-.lt_product{
-  padding: 10px;
-}
-
-.lt_product a{
-  display: block;
-  width: 48%;
-  float: left;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.lt_product a:nth-child(odd){
-  margin-right: 4%;
-}
-
-.lt_product .price{
-  color: red;
-}
-
-.lt_product .oldPricce{
-  text-decoration: line-through;
-}

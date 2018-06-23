@@ -1,0 +1,17 @@
+.lt_history{
+  font-size: 12px;
+  padding: 10px;
+  color: #666;
+}
+
+.lt_history .title span{
+  height: 30px;
+  line-height: 30px;
+}
+
+.lt_history .content li{
+  border: 1px dashed red;
+  padding-left: 10px;
+  line-height: 30px;
+  height: 30px;
+}

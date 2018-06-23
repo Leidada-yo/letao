@@ -22,6 +22,7 @@ img{
   margin: 0 auto;
   padding-top: 45px;
   padding-bottom: 55px;
+  position: relative;
 }
 
 .lt_header{
@@ -99,4 +100,63 @@ img{
 
 .lt_footer li.now p{
   color:darkorange;
+}
+/* 搜索页公共样式 */
+.lt_search{
+  padding: 10px;
+  position: relative;
+}
+
+.lt_search input{
+  height: 34px;
+  border: 1px solid #007aff;
+  font-size: 12px;
+  margin: 0;
+}
+
+.lt_search button{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+/* 产品公共样式 */
+.lt_product{
+  padding: 10px;
+}
+
+.lt_product a{
+  display: block;
+  width: 48%;
+  float: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.lt_product a:nth-child(odd){
+  margin-right: 4%;
+}
+
+.lt_product .price{
+  color: red;
+}
+
+.lt_product .oldPricce{
+  text-decoration: line-through;
+}
+
+.loading{
+  width: 50px;
+  height: 50px;
+  border: 3px solid #007aff;
+  margin: 100px auto;
+  animation: donghua 1s infinite;
+}
+
+@keyframes donghua{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
 }
